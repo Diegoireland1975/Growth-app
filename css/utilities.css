@@ -1,6 +1,6 @@
 :root {
   --primary-color: #4891ff;
-  --light-color: #f4f4f6;
+  --light-color: #f5f5f5;
   --dark-color: #111;
   --primary-color-hover: #1570f9;
 }
@@ -23,6 +23,7 @@
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
+  margin-right: 1rem;
   border: none;
   font-weight: 600;
   border-radius: 10px;
@@ -36,12 +37,20 @@
   background: var(--primary-color);
   color: #fff;
 }
+
 .btn-primary:hover {
   background: var(--primary-color-hover);
+  color: #fff;
 }
+
 .btn-light {
   background: var(--light-color);
-  color: #000;
+  color: #131316;
+}
+
+.btn-light:hover {
+  background: var(--primary-color);
+  color: #fff;
 }
 .btn-dark {
   background: var(--dark-color);
@@ -54,10 +63,9 @@
 }
 
 /* text */
-.hero-heading {
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
 .text-xxl {
   font-size: 3.5vw;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
