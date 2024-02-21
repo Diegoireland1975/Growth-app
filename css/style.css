@@ -65,10 +65,17 @@ li {
 .hero {
   padding: 2.5rem 0;
 }
-
-.hero-content {
-  max-width: 650px;
-  margin: 0 auto;
+.hero .container {
+  background: url("../images/hero-bg-mobile.png") no-repeat center
+    bottom/contain;
+  height: 100vh;
+}
+.hero-content,
+.hero-text {
+  width: 70%;
+}
+.hero-text {
+  margin-bottom: 1.5rem;
 }
 
 .hero-buttons {
@@ -96,6 +103,11 @@ li {
   }
   .menu-desktop {
     display: inline-flex;
+  }
+
+  .hero .container {
+    background: url("../images/hero-bg.png") no-repeat center bottom/contain;
+    height: 100vh;
   }
   .hero-buttons.flex {
     flex-direction: row;
