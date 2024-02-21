@@ -23,7 +23,6 @@
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  margin-right: 1rem;
   border: none;
   font-weight: 600;
   border-radius: 10px;
@@ -64,13 +63,13 @@
 
 /* text */
 .text-xxl {
-  font-size: 3.5vw;
+  font-size: 4vw;
   line-height: 1.2;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 .text-xl {
-  font-size: 2.5vw;
+  font-size: 3vw;
   line-height: 1.4;
   font-weight: 400;
   margin-bottom: 1.5rem;
@@ -86,6 +85,10 @@
   line-height: 1.4;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+/* background */
+.bg-black {
+  background: #131316;
 }
 
 .text-center {
