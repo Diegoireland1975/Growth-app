@@ -10,6 +10,7 @@
 /* base style */
 body {
   color: #131316;
+  background: red;
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   background: #fff;
@@ -64,12 +65,16 @@ li {
 /* HERO SECTION */
 /* ############# */
 .hero {
-  padding: 2.5rem 0;
+  padding: 3rem 0 2.5rem;
 }
-/* .hero .container {
-  height: auto;
-} */
-
+.hero-heading,
+.hero-text {
+  padding: 0 2rem;
+}
+.hero-content,
+.hero-text {
+  text-align: center;
+}
 .hero-text {
   margin-bottom: 1.5rem;
 }
@@ -84,7 +89,10 @@ li {
 .hero-buttons.flex {
   flex-direction: column;
   align-items: stretch;
-  text-align: center;
+}
+
+.hero-mobile {
+  margin-bottom: 2rem;
 }
 
 /* ############# */
@@ -93,16 +101,45 @@ li {
 .video {
   padding: 1.5rem 0 3rem;
 }
+
+.video-heading {
+  margin-bottom: 1.5rem;
+}
 .video-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.video-heading {
-  color: #fff;
+
+.img-preview {
+  margin-bottom: 2rem;
 }
+
+/* ############# */
+/* TESTIMONIALS */
+/* ############# */
+
+.testimonials {
+  position: relative;
+  bottom: 3rem;
+  padding: 1rem 0;
+}
+
+.testimonials-heading {
+  border-top: 1px dotted;
+  padding-top: 1.5rem;
+  text-align: left;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
+  .text-xxl {
+    font-size: 3.5vw;
+  }
+  .text-xl {
+    font-size: 2.5vw;
+  }
+
   .main-header .container {
     display: flex;
     justify-content: space-between;
@@ -116,14 +153,21 @@ li {
     display: inline-flex;
   }
 
-  .hero-content,
-  .hero-text {
-    max-width: 70%;
-  }
-
   .hero .container {
     background: url("../images/hero-bg.png") no-repeat center bottom/contain;
     height: 550px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-heading,
+  .hero-text {
+    padding: 0;
+  }
+
+  .hero-content,
+  .hero-text {
+    max-width: 70%;
+    text-align: left;
   }
 
   .hero-buttons .btn {
@@ -132,10 +176,16 @@ li {
   .hero-buttons.flex {
     flex-direction: row;
     justify-content: flex-start;
-    text-align: center;
   }
 
   .hero-mobile {
     display: none;
+  }
+  .video-heading {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+  .video-content {
+    align-items: center;
   }
 }
