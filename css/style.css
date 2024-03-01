@@ -129,17 +129,11 @@ li {
   padding-top: 1.5rem;
   text-align: left;
 }
-.grid {
+.testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   align-items: start;
-}
-.card {
-  background: #fafafa;
-  color: #131316;
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
 }
 
 .card .card-text {
@@ -155,10 +149,24 @@ li {
 /* ############# */
 /* PRICING */
 /* ############# */
-.pricing-sub {
+.pricing-subheading {
   color: #494a4d;
 }
 
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.pricing-card-header {
+  border-bottom: 1px dotted;
+}
+
+.pricing-card-price {
+  margin: 2rem 0;
+}
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   .text-xl {
@@ -166,6 +174,9 @@ li {
   }
   .text-lg {
     font-size: 2.5vw;
+  }
+  .text-md {
+    font-size: 2vw;
   }
 
   /* header */

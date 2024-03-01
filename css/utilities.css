@@ -1,6 +1,6 @@
 :root {
   --primary-color: #4891ff;
-  --light-color: #f5f5f5;
+  --light-color: #dfdee2;
   --dark-color: #111;
   --primary-color-hover: #1570f9;
 }
@@ -84,8 +84,8 @@
   margin-bottom: 1.5rem;
 }
 
-.text-med {
-  font-size: 2vw;
+.text-md {
+  font-size: 3vw;
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -95,6 +95,13 @@
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1rem;
+}
+/* card */
+.card {
+  background: #fafafa;
+  color: #131316;
+  border-radius: 6px;
+  padding: 2rem 1.5rem;
 }
 
 /* background */
@@ -106,12 +113,4 @@
 .bg-light {
   background: var(--bg-light);
   color: #131316;
-}
-
-/* card */
-.card {
-  background: #fafafa;
-  color: #131316;
-  border-radius: 6px;
-  padding: 2rem 1.5rem;
 }
