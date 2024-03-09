@@ -1,6 +1,6 @@
 :root {
   --primary-color: #4891ff;
-  --light-color: #dfdee2;
+  --light-color: #fff;
   --dark-color: #111;
   --primary-color-hover: #1570f9;
 }
@@ -35,6 +35,7 @@
   font-weight: 600;
   border-radius: 10px;
   transition: 0.5s;
+  text-align: center;
 }
 .btn:hover {
   opacity: 0.8;
@@ -100,7 +101,7 @@
 .card {
   background: #fafafa;
   color: #131316;
-  border-radius: 6px;
+  border-radius: 16px;
   padding: 2rem 1.5rem;
 }
 
@@ -111,6 +112,6 @@
 }
 
 .bg-light {
-  background: var(--bg-light);
+  background: var(--light-color);
   color: #131316;
 }

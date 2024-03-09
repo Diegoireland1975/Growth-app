@@ -149,28 +149,110 @@ li {
 /* ############# */
 /* PRICING */
 /* ############# */
+.pricing .bg-light {
+  background: #dfdee2;
+}
 .pricing-subheading {
   color: #494a4d;
 }
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 3rem 0;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.pricing-card-header {
-  border-bottom: 1px dotted;
+  grid-template-columns: 1fr;
+  max-width: 350px;
+  margin: 3rem auto;
+  gap: 2rem;
 }
 
 .pricing-card-price {
+  font-size: 0.8rem;
   margin: 2rem 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.pricing-card-body i {
+  font-size: 0.6rem;
+  margin-right: 0.5rem;
+}
+
+.pricing-card-body ul {
+  margin-bottom: 2rem;
+}
+
+.pricing-card-body p:nth-child(1) {
+  margin-bottom: 0.75rem;
+}
+
+/* ############# */
+/* FAQ */
+/* ############# */
+
+.faq {
+  padding: 3rem 0;
+}
+
+.faq .faq-menu {
+  max-width: 400px;
+  margin: 0 auto;
+  /* margin-bottom: 1rem; */
+  background: #ddd;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+
+.faq-menu li {
+  padding: 0.75rem 1.5rem;
+}
+.faq-menu li.active {
+  background: var(--primary-color);
+}
+
+details {
+  margin: 0.5rem 0;
+  padding-bottom: 1rem;
+}
+
+details:nth-child(1) {
+  border-bottom: 1px solid #131316;
+}
+
+details:not(:nth-child(1)) {
+  border-bottom: 1px solid #ccc;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 1rem 0;
+}
+
+details summary::after {
+  content: "-";
+  transition: 0.4s ease all;
+}
+
+details[open] > summary::after {
+  content: "+";
+}
+
+details p {
+  opacity: 0;
+  transition: opacity, 0.5s ease;
+}
+
+details[open] p {
+  opacity: 1;
 }
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   .text-xl {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   .text-lg {
     font-size: 2.5vw;
@@ -240,5 +322,17 @@ li {
 
   .card p:nth-child(2) {
     font-size: 1.125rem;
+  }
+
+  /* pricing */
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    align-items: center;
+  }
+
+  /* FAQ */
+  .faq .faq-menu {
+    margin-bottom: 3rem;
   }
 }
