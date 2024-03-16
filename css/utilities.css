@@ -1,7 +1,7 @@
 :root {
   --primary-color: #4891ff;
   --light-color: #fff;
-  --dark-color: #111;
+  --dark-color: #132326;
   --primary-color-hover: #1570f9;
 }
 
@@ -75,7 +75,7 @@
   font-size: 5vw;
   line-height: 1.2;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .text-lg {
@@ -91,12 +91,14 @@
   font-weight: 400;
   margin-bottom: 1rem;
 }
+
 .text-sm {
-  font-size: 1vw;
+  font-size: 0.8rem;
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1rem;
 }
+
 /* card */
 .card {
   background: #fafafa;

@@ -22,7 +22,7 @@ a {
 
 img {
   display: block;
-  width: 100%;
+  /* width: 100%; */
 }
 li {
   list-style: none;
@@ -92,6 +92,7 @@ li {
 
 .hero-mobile {
   margin-bottom: 2rem;
+  margin: 0 auto;
 }
 
 /* ############# */
@@ -192,10 +193,13 @@ li {
   padding: 3rem 0;
 }
 
+.faq-menu.flex {
+  justify-content: center;
+}
 .faq .faq-menu {
-  max-width: 400px;
+  max-width: 450px;
   margin: 0 auto;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
   background: #ddd;
   border-radius: 10px;
   padding: 0.75rem 1.5rem;
@@ -203,10 +207,15 @@ li {
 }
 
 .faq-menu li {
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0.8rem;
 }
 .faq-menu li.active {
   background: var(--primary-color);
+  color: #fff;
 }
 
 details {
@@ -241,22 +250,68 @@ details[open] > summary::after {
   content: "+";
 }
 
-details p {
-  opacity: 0;
-  transition: opacity, 0.5s ease;
+/* Footer */
+.main-footer {
+  padding: 4rem 0 2rem;
 }
 
-details[open] p {
-  opacity: 1;
+.main-footer .card {
+  margin: 1.5rem auto;
 }
+
+.main-footer .card p {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-footer h4 {
+  margin-bottom: 1rem;
+}
+
+.main-footer li {
+  line-height: 2;
+}
+
+.main-footer a {
+  color: #ccc;
+}
+
+.main-footer i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.main-footer form {
+  display: flex;
+}
+
+.main-footer input[type="email"] {
+  display: inline;
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-right: 0.5rem;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   .text-xl {
     font-size: 3vw;
   }
+
   .text-lg {
     font-size: 2.5vw;
   }
+
   .text-md {
     font-size: 2vw;
   }
@@ -315,6 +370,9 @@ details[open] p {
   }
 
   /* testimonials */
+  .testimonials-heading {
+    margin-bottom: 4rem;
+  }
   .card .card-text {
     font-size: 1.25rem;
     margin-bottom: 3rem;
@@ -334,5 +392,17 @@ details[open] p {
   /* FAQ */
   .faq .faq-menu {
     margin-bottom: 3rem;
+  }
+  .faq-menu li {
+    font-size: 1rem;
+  }
+
+  /* footer */
+  .main-footer .card p {
+    font-size: 0.9rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 }
