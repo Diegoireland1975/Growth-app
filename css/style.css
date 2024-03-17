@@ -33,13 +33,16 @@ li {
 .main-header {
   padding: 1.5rem 0;
 }
-/* .logo {
-  width: 100rem;
-} */
-.hamburger {
-  width: 40px;
+
+.hamburger-button {
+  width: 30px;
   cursor: pointer;
+  z-index: 1000;
 }
+
+/* .mobile-menu.open + .hamburger-button {
+  width: 20px;
+} */
 
 .menu-desktop {
   display: none;
@@ -48,18 +51,48 @@ li {
 .menu-desktop a {
   text-transform: capitalize;
   margin-right: 1rem;
-  display: block;
+  display: inline-block;
   font-weight: 600;
   transition: 0.5s;
 }
+
 .menu-desktop a i,
 .hero a i {
   margin-right: 10px;
 }
+
 .menu-desktop a:hover {
   color: var(--primary-color);
 }
 
+/* Mobile menu */
+.mobile-menu {
+  padding: 1rem;
+  background-color: rgba(80, 80, 80, 0.95);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 75%;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+  z-index: 100;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75vh;
+}
+
+.mobile-menu a {
+  color: #fff;
+}
 /* ############# */
 /* HERO SECTION */
 /* ############# */
@@ -196,6 +229,7 @@ li {
 .faq-menu.flex {
   justify-content: center;
 }
+
 .faq .faq-menu {
   max-width: 450px;
   margin: 0 auto;
@@ -212,7 +246,9 @@ li {
   text-align: center;
   white-space: nowrap;
   font-size: 0.8rem;
+  cursor: pointer;
 }
+
 .faq-menu li.active {
   background: var(--primary-color);
   color: #fff;
@@ -316,13 +352,11 @@ details[open] > summary::after {
     font-size: 2vw;
   }
 
-  /* header */
-  .main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .mobile-menu {
+    display: none;
   }
-  .hamburger {
+
+  .hamburger-button {
     display: none;
   }
 
