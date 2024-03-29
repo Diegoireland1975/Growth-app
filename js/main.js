@@ -7,7 +7,7 @@ let isClose = true;
 hamburgerBtn.addEventListener("click", () => {
   // toggle a class to show the mobile menu
   mobileMenu.classList.toggle("open");
-  // change icon on click
+  // change icon image on click
   if (isClose) {
     hamburgerBtn.src = "images/close.png";
   } else {

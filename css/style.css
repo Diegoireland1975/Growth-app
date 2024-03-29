@@ -14,6 +14,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -22,8 +23,9 @@ a {
 
 img {
   display: block;
-  /* width: 100%; */
+  width: 100%;
 }
+
 li {
   list-style: none;
 }
@@ -43,6 +45,9 @@ li {
 /* .mobile-menu.open + .hamburger-button {
   width: 20px;
 } */
+.logo {
+  width: 100px;
+}
 
 .menu-desktop {
   display: none;
@@ -92,6 +97,11 @@ li {
 
 .mobile-menu a {
   color: #fff;
+  text-transform: capitalize;
+}
+
+.mobile-menu i {
+  margin-right: 0.5rem;
 }
 /* ############# */
 /* HERO SECTION */
@@ -285,27 +295,33 @@ details summary::after {
 details[open] > summary::after {
   content: "+";
 }
-
+/* ############# */
 /* Footer */
+/* ############# */
+
 .main-footer {
   padding: 4rem 0 2rem;
 }
 
 .main-footer .card {
-  margin: 1.5rem auto;
+  max-width: 350px;
+  margin: 1.5rem 0;
 }
 
 .main-footer .card p {
+  margin: 0.5rem 0;
   font-size: 0.8rem;
-  margin: 1rem 0;
 }
 
+.main-footer .footer-grid > div {
+  text-align: center;
+}
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr;
   justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .main-footer h4 {
@@ -324,8 +340,10 @@ details[open] > summary::after {
   margin-right: 0.5rem;
   font-size: 1.5rem;
 }
+
 .main-footer form {
   display: flex;
+  flex-direction: column;
 }
 
 .main-footer input[type="email"] {
@@ -335,7 +353,7 @@ details[open] > summary::after {
   border: 0;
   border-radius: 10px;
   border: 1px solid #ccc;
-  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* MEDIA QUERIES */
@@ -434,9 +452,5 @@ details[open] > summary::after {
   /* footer */
   .main-footer .card p {
     font-size: 0.9rem;
-  }
-
-  .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 }
