@@ -303,9 +303,13 @@ details[open] > summary::after {
   padding: 4rem 0 2rem;
 }
 
+.main-footer .logo {
+  margin-left: 3rem;
+}
+
 .main-footer .card {
   max-width: 350px;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
 }
 
 .main-footer .card p {
@@ -316,6 +320,7 @@ details[open] > summary::after {
 .main-footer .footer-grid > div {
   text-align: center;
 }
+
 .footer-grid {
   display: grid;
   justify-content: center;
@@ -452,5 +457,9 @@ details[open] > summary::after {
   /* footer */
   .main-footer .card p {
     font-size: 0.9rem;
+  }
+
+  .main-footer .logo {
+    margin: 0;
   }
 }
