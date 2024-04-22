@@ -42,9 +42,9 @@ li {
   z-index: 1000;
 }
 
-/* .mobile-menu.open + .hamburger-button {
-  width: 20px;
-} */
+.mobile-menu.open + .hamburger-button {
+  width: 25px;
+}
 .logo {
   width: 100px;
 }
